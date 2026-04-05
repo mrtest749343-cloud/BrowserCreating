@@ -1,0 +1,23 @@
+JAVA Prompt(This may not work on the web, it's your work to figure the error 😁):
+
+Enhance the following single-file Java Swing browser to make it more modular, user-friendly, and feature-rich while keeping all code in one file. Maintain the current JFrame structure with an address bar (JTextField) and a display pane (JEditorPane), but add the following improvements:
+1. Navigation Buttons: Add Back, Forward, Reload, and Home buttons at the top alongside the address bar, fully functional.
+2. Simple Tab Support: Allow opening multiple browser tabs using JTabbedPane; each tab should contain an independent JEditorPane with its own address bar or share the main address bar.
+3. Error Handling: Display friendly messages when a page fails to load and optionally highlight invalid URLs.
+4. Keyboard Shortcuts: Support shortcuts like Ctrl+T (new tab), Ctrl+W (close tab), F5 (reload), and Enter in the address bar to load pages.
+5. URL Correction: Automatically add “http://” to addresses if the user omits the scheme.
+6. Minimal Logging: Print errors or page load events to the console for debugging.
+7. Code Organization: Refactor the code into separate private methods or inner classes for components like navigation controls, tab management, and page loading to improve readability and modularity while keeping everything in one file.
+8. UI Enhancements: Use layouts properly so the toolbar and tabs resize dynamically, and make the window resizable without breaking the layout.
+9. Optional Extras: Add a “Home” page button, a progress indicator for page loading, or right-click context menu for basic actions like refresh or copy URL.
+Provide fully working, commented Java code implementing these features in a single Java file, ready to run. Ensure the code is clean, readable, and easily extendable for future features like bookmarks, history, or download management.
+
+PYTHON Prompt(This else, may work well):
+Create a fully functional and modular desktop web browser using Python and PyQt5 (with PyQtWebEngine). The application must be designed with a clean architecture separating concerns into multiple classes and components to allow easy future extension and maintenance.
+The browser should include a main window class responsible only for layout composition and high-level orchestration, a dedicated browser view component based on QWebEngineView, and separate modules or classes for navigation controls, tab management, and utility logic. Avoid putting everything in a single file or class; structure the code as if it were a real scalable project.
+Implement a navigation bar that includes a URL input field, back, forward, reload, and home buttons. The URL bar must handle user input robustly, automatically correcting missing schemes (e.g., adding "http://" if needed), and safely converting strings into QUrl objects. Include proper signal-slot connections and ensure no crashes occur on invalid input.
+Add a tab system using QTabWidget where each tab contains an independent browser instance. Tabs must support opening, closing, and switching, and opening a new tab should default to a homepage. Include a button or shortcut (such as Ctrl+T) to open new tabs.
+Implement basic error handling and user feedback. For example, handle invalid URLs gracefully, display loading states if possible, and prevent the application from crashing due to bad inputs or failed page loads. Optionally log errors to the console for debugging.
+Design the UI to be clean and extendable, using layouts properly instead of absolute positioning. The toolbar should be reusable and not tightly coupled to a single browser instance, so that it can dynamically interact with the currently active tab.
+Ensure the code is readable, well-organized, and commented where necessary to explain key architectural decisions. Use object-oriented design principles, including encapsulation and separation of concerns. Avoid overly complex patterns, but structure the project in a way that future features like bookmarks, history tracking, downloads, or theming can be easily added.
+Optionally include keyboard shortcuts for common actions such as reload (F5), new tab (Ctrl+T), and close tab (Ctrl+W).
